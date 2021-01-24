@@ -2,8 +2,13 @@ import re
 import pyperclip
 
 # Get body of text from the clipboard.
-print('SUCCESS: Text copied from clipboard.')
-text = pyperclip.paste()
+
+try: 
+    text = pyperclip.paste()
+    print('SUCCESS: Text copied from clipboard.')
+except (SyntaxError, TypeError):
+    print('ERROR: No text on your clipboard.')
+    
 
 # Prompt for the character that requires stripping.
 print('What character needs stripping?')
