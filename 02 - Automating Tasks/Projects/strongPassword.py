@@ -17,7 +17,6 @@ PASSWORD REQUIREMENTS -
 - Special characters are allowed.
     ''')
     getPassword = stdiomask.getpass(prompt='-> ')
-
     while True:
         if len(getPassword) < 8:
             print('ERROR: Password too short. Please create a longer password.\n')
